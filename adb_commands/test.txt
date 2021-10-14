@@ -1,0 +1,19 @@
+
+Problem
+Reason
+Solution
+Unable to Build successfully
+    1. Android source code contain python2 files
+    2. Error in file "device/generic/goldfish/tools/mk_combined_img.py"
+    1. Insatll any version of python2 because source code is in python2.
+    2. Go to file "device/generic/goldfish/tools/mk_combined_img.py" and change first line "#!/usr/bin/python" to "#!/usr/bin/python2"
+Unable to build Emulator
+While building "lunch" step may missed and didn’t selected device
+       After cleaning all files that are formed by previous build, always perform "lunch" command, select device and perform make command.
+Emulator is not running
+Path is not set for environmental varible 
+To run emulator and setting up environment perform these commands:
+$ source build/envsetup.sh
+$ lunch <n>   // n is device number was selected while building source code eg.  Lunch 22.
+$ emulator
+
